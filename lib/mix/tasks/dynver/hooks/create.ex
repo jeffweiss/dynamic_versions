@@ -18,7 +18,7 @@ defmodule Mix.Tasks.Dynver.Hooks.Create do
   defp hook_content do
     """
     #!/bin/bash
-    `git describe > VERSION`
+    `git describe --always --tags > VERSION`
     """
   end
 
