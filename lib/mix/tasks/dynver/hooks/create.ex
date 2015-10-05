@@ -12,7 +12,7 @@ defmodule Mix.Tasks.Dynver.Hooks.Create do
 
   defp create_executeable_file(path, content \\ hook_content) do
     File.write(path, content)
-    File.chmod(path, 555)
+    File.chmod(path, 0o755)
   end
 
   defp hook_content do
